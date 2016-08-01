@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
-
 import com.daimajia.numberprogressbar.NumberProgressBar;
 import com.daimajia.numberprogressbar.OnProgressBarListener;
 
@@ -25,7 +24,9 @@ public class MainActivity extends AppCompatActivity implements OnProgressBarList
 
         bnp = (NumberProgressBar)findViewById(R.id.numberbar1);
         bnp.setOnProgressBarListener(this);
+        //启动一个定时器
         timer = new Timer();
+        //启动定时器，让numberbar1这个控件每隔100毫秒进度条就增加1
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
